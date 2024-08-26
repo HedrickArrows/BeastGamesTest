@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class CraftingScript : MonoBehaviour
 {
-    Dictionary<Craftable, List<Craftable>> _recipes; //mo¿liwe do przerobienia na List<KeyValPair<>> zamiast Dictionary w wypadku przepisów
+    Dictionary<Craftable, List<Craftable>> _blueprints; //mo¿liwe do przerobienia na List<KeyValuePair<>> zamiast Dictionary<> w wypadku rzeczy do stworzenia z kilku ró¿nych przepisów
 
     // Start is called before the first frame update
     void Start()
     {
-        _recipes = new Dictionary<Craftable, List<Craftable>>();
+		_blueprints = new Dictionary<Craftable, List<Craftable>>();
+
+        Debug.Log(FindBlueprint(new List<Craftable>()));
     }
 
     // Update is called once per frame
@@ -21,7 +23,7 @@ public class CraftingScript : MonoBehaviour
 
     public Craftable FindBlueprint(List<Craftable> input) {
 
-        var result = _recipes.FirstOrDefault(x => x.Value.SequenceEqual(input));
+        var result = _blueprints.FirstOrDefault(x => x.Value.SequenceEqual(input));
 
         Debug.Log(result);
 
