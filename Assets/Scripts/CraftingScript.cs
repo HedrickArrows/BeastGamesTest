@@ -8,16 +8,13 @@ public class CraftingScript : MonoBehaviour
     Dictionary<Craftable, List<Craftable>> _blueprints; //mo¿liwe do przerobienia na List<KeyValuePair<>> zamiast Dictionary<> w wypadku rzeczy do stworzenia z kilku ró¿nych przepisów
 
     // Start is called before the first frame update
-    void Start()
-    {
+    private void Start(){
 		_blueprints = new Dictionary<Craftable, List<Craftable>>();
 
         Debug.Log(FindBlueprint(new List<Craftable>()));
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         
     }
 
