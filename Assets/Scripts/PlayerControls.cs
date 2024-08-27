@@ -8,22 +8,13 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] float sensitivity;
     [SerializeField] Camera playerCamera;
-    private Vector2 moveDirection = Vector2.zero;
-    private Vector2 lookingDirection = Vector2.zero;
+    [SerializeField] InputManager inputManager;
 	private float cameraPitch = 0.0f;
 
     private void Update(){
-        MoveCharacter(moveDirection);
-        LookAround(lookingDirection);
+        MoveCharacter(inputManager.moveDirection);
+        LookAround(inputManager.lookingDirection);
     }
-
-	public void KeyboardMovementInput(InputAction.CallbackContext context){
-        moveDirection = context.ReadValue<Vector2>();
-	}
-
-    public void MouseLookInput(InputAction.CallbackContext context){
-		lookingDirection = context.ReadValue<Vector2>();
-	}
 
     private void MoveCharacter(Vector2 input) {
         transform.position += (transform.forward * input.y + transform.right * input.x) * speed * Time.deltaTime;
