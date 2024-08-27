@@ -5,20 +5,20 @@ using UnityEngine;
 
 public class CraftingScript : MonoBehaviour
 {
-    Dictionary<Craftable, List<Craftable>> _blueprints; //mo¿liwe do przerobienia na List<KeyValuePair<>> zamiast Dictionary<> w wypadku rzeczy do stworzenia z kilku ró¿nych przepisów
+    Dictionary<CraftingComponent, List<CraftingComponent>> _blueprints; //mo¿liwe do przerobienia na List<KeyValuePair<>> zamiast Dictionary<> w wypadku rzeczy do stworzenia z kilku ró¿nych przepisów
 
     // Start is called before the first frame update
     private void Start(){
-		_blueprints = new Dictionary<Craftable, List<Craftable>>();
+		_blueprints = new Dictionary<CraftingComponent, List<CraftingComponent>>();
 
-        Debug.Log(FindBlueprint(new List<Craftable>()));
+        Debug.Log(FindBlueprint(new List<CraftingComponent>()));
     }
 
     void Update(){
         
     }
 
-    public Craftable FindBlueprint(List<Craftable> input) {
+    public CraftingComponent FindBlueprint(List<CraftingComponent> input) {
 
         var result = _blueprints.FirstOrDefault(x => x.Value.SequenceEqual(input));
 

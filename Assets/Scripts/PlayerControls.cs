@@ -5,20 +5,12 @@ using UnityEngine.InputSystem;
 
 public class PlayerControls : MonoBehaviour
 {
-    public InputActionReference moveAction;
-    [SerializeField] float speed = 10f;
-    [SerializeField] float sensitivity = 2f;
+    [SerializeField] float speed;
+    [SerializeField] float sensitivity;
     [SerializeField] Camera playerCamera;
     private Vector2 moveDirection = Vector2.zero;
     private Vector2 lookingDirection = Vector2.zero;
 	private float cameraPitch = 0.0f;
-	private Vector2 currentMouseDelta = Vector2.zero;
-	private Vector2 currentMouseDeltaVelocity = Vector2.zero;
-
-	private void Start(){
-        //moveAction.action.ApplyBindingOverride(new InputBinding { overrideProcessors = "scale(factor=10)" });
-    }
-
 
     private void Update(){
         MoveCharacter(moveDirection);
@@ -38,12 +30,8 @@ public class PlayerControls : MonoBehaviour
     }
 
     private void LookAround(Vector2 input){
-        if (!playerCamera) {
-            Debug.Log("No camera!");
-            return;
-        }
         input *= Time.smoothDeltaTime * sensitivity;
-        Debug.Log(input);
+        
         cameraPitch -= input.y; 
         cameraPitch = Mathf.Clamp(cameraPitch, -90f, 90f);
         playerCamera.transform.localEulerAngles = Vector3.right * cameraPitch;

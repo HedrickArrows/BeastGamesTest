@@ -444,7 +444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveAction: {fileID: -3318901257514878237, guid: 52e3e88d150316a4ab3d09d66790bdfc, type: 3}
   speed: 10
-  sensitivity: 2
+  sensitivity: 3
   playerCamera: {fileID: 963194227}
 --- !u!4 &825993875
 Transform:

@@ -62,3 +62,4 @@ Library/Bee/TundraBuildState.state.map
 Library/SceneVisibilityState.asset
 Library/Search/transactions.db
 Library/StateCache/MainStageHierarchy/c9/c94db0b22c92d4ff5e5692a42f4a105f.json
+*.meta
