@@ -20,10 +20,12 @@ public class InventoryDisplay : MonoBehaviour
 		for (int i = 0; i < slots.Length; i++) {
 			if (i < inventory.items.Count) {
 				slots[i].gameObject.SetActive(true);
+				slots[i].GetComponentInParent<UnityEngine.UI.Button>().enabled = true;
 				slots[i].UpdateItemDisplay(inventory.items[i].componentType.Icon, i);
 			}
 			else { 
 				slots[i].gameObject.SetActive(false);
+				slots[i].GetComponentInParent<UnityEngine.UI.Button>().enabled = false;
 			}
 		}
     }
