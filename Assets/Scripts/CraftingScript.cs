@@ -14,7 +14,7 @@ public class CraftingScript : MonoBehaviour
         Debug.Log(FindBlueprint(new List<CraftingComponent>()));
     }
 
-    void Update(){
+    private void Update(){
         
     }
 
