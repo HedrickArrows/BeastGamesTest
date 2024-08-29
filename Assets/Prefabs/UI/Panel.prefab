@@ -121,7 +121,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 593617912622167044}
+      - m_Target: {fileID: 4332238396781110875}
         m_TargetAssemblyTypeName: ItemDisplay, Assembly-CSharp
         m_MethodName: DropFromInventory
         m_Mode: 2
@@ -144,7 +144,6 @@ GameObject:
   - component: {fileID: 2936042398139164559}
   - component: {fileID: 3453954439362921511}
   - component: {fileID: 1992079045252131826}
-  - component: {fileID: 593617912622167044}
   - component: {fileID: 5995445247210025248}
   m_Layer: 5
   m_Name: Image
@@ -210,20 +209,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &593617912622167044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3452955050535612712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b99629b795aebf240af2a996469873b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemIndex: 0
-  image: {fileID: 1992079045252131826}
 --- !u!61 &5995445247210025248
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -280,6 +265,7 @@ GameObject:
   - component: {fileID: 8913597775612723167}
   - component: {fileID: 8737674475429734551}
   - component: {fileID: 5044134207767897870}
+  - component: {fileID: 4332238396781110875}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -345,3 +331,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4332238396781110875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5984877114937080361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b99629b795aebf240af2a996469873b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemIndex: 0
+  image: {fileID: 1992079045252131826}
+  button: {fileID: 3863299659831889219}

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Stone Axe
   m_EditorClassIdentifier: 
   componentName: Stone Axe
-  icon: {fileID: 0}
-  model: {fileID: 0}
+  icon: {fileID: 21300000, guid: b489441c6d263d145b4e4e646e416eeb, type: 3}
+  model: {fileID: 5670976947084611541, guid: d197862fa8e499d47be295a8a1100b2f, type: 3}
   description: 

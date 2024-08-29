@@ -6,26 +6,28 @@ using UnityEngine.UIElements;
 
 public class InventoryDisplay : MonoBehaviour
 {
-    public InventorySystem inventory;
-	public ItemDisplay[] slots;
+	[SerializeField]
+    private InventorySystem inventory;
+	[SerializeField]
+	private ItemDisplay[] slots;
 	[SerializeField]
 	private PlayerInventory playerInventory;
     
 
-    void Start(){
+    private void Start(){
         UpdateInventory();
     }
 
+	public bool HasSpace => inventory.ItemsCount < slots.Length;
+
     public void UpdateInventory() {
 		for (int i = 0; i < slots.Length; i++) {
-			if (i < inventory.items.Count) {
-				slots[i].gameObject.SetActive(true);
-				slots[i].GetComponentInParent<UnityEngine.UI.Button>().enabled = true;
-				slots[i].UpdateItemDisplay(inventory.items[i].componentType.Icon, i);
+			if (i < inventory.ItemsCount) {
+				slots[i].EnableItemDisplay();
+				slots[i].UpdateItemDisplay(inventory.GetItem(i).componentType.Icon, i);
 			}
 			else { 
-				slots[i].gameObject.SetActive(false);
-				slots[i].GetComponentInParent<UnityEngine.UI.Button>().enabled = false;
+				slots[i].EnableItemDisplay(false);
 			}
 		}
     }

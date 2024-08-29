@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class ItemContainer : MonoBehaviour
 {
-    public ItemInstance item;
+    [SerializeField]
+    private ItemInstance item;
+
+    public ItemInstance Item => item;
 
     public ItemInstance TakeItem() {
         Destroy(gameObject);

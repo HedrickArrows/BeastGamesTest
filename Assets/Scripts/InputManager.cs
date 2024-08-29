@@ -17,7 +17,8 @@ public class InputManager : MonoBehaviour
 	public void MouseLookInput(InputAction.CallbackContext context) => lookingDirection = context.ReadValue<Vector2>();
 
 	public void InventoryOpen(InputAction.CallbackContext context) {
-		if (context.performed) Debug.Log("Button Pressed");
+		Debug.Log("Yes");
+		if (context.performed) display.gameObject.SetActive(!display.gameObject.activeSelf);
 	}
 
 	public void DropItem(InputAction.CallbackContext context) {

@@ -10,9 +10,10 @@ public class PlayerInventory : MonoBehaviour
 	[SerializeField]
 	private InventoryDisplay display;
 
+
 	private void OnTriggerEnter(Collider other)	{
 		Debug.Log("Touched " + other.name);
-		if (other.TryGetComponent(out ItemContainer container))	{
+		if (other.TryGetComponent(out ItemContainer container) && display.HasSpace)	{
 			inventory.AddItem(container.TakeItem());
 			display.UpdateInventory();
 		}
@@ -20,15 +21,10 @@ public class PlayerInventory : MonoBehaviour
 
 	public void DropItem(int index)
 	{
-		var item = inventory.items[index];
-		GameObject droppedItem = new GameObject(inventory.items[index].componentType.ComponentName);
-		droppedItem.transform.position = transform.position + transform.forward * 2 + Vector3.up;
-		droppedItem.AddComponent<Rigidbody>();
-		droppedItem.AddComponent<SphereCollider>().isTrigger = true;
-		droppedItem.AddComponent<ItemContainer>().item = inventory.items[index];
-		GameObject itemModel = Instantiate(inventory.items[index].componentType.Model, droppedItem.transform);
+		var item = inventory.GetItem(index);
+		GameObject itemModel = Instantiate(item.componentType.Model,transform.position + transform.forward * 2 + Vector3.up, Quaternion.identity);
 
-		inventory.items.RemoveAt(index);
+		inventory.RemoveItem(index);
 
 		display.UpdateInventory();
 	}
