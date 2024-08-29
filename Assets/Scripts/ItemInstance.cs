@@ -5,7 +5,10 @@ using UnityEngine;
 [System.Serializable]
 public class ItemInstance
 {
-	public CraftingComponent componentType;
+	[SerializeField]
+	private CraftingComponent componentType;
+
+	public CraftingComponent ComponentType => componentType;
 
 	public ItemInstance(CraftingComponent componentType){
 		this.componentType = componentType; 

@@ -18,13 +18,17 @@ public class InventoryDisplay : MonoBehaviour
         UpdateInventory();
     }
 
+	private void nEnable() {
+		UpdateInventory();
+	}
+
 	public bool HasSpace => inventory.ItemsCount < slots.Length;
 
     public void UpdateInventory() {
 		for (int i = 0; i < slots.Length; i++) {
 			if (i < inventory.ItemsCount) {
 				slots[i].EnableItemDisplay();
-				slots[i].UpdateItemDisplay(inventory.GetItem(i).componentType.Icon, i);
+				slots[i].UpdateItemDisplay(inventory.GetItem(i).ComponentType.Icon, i);
 			}
 			else { 
 				slots[i].EnableItemDisplay(false);

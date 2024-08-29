@@ -11,7 +11,7 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] InputManager inputManager;
 	private float cameraPitch = 0.0f;
 
-    private void Update(){
+	private void Update(){
         MoveCharacter(inputManager.moveDirection);
         LookAround(inputManager.lookingDirection);
     }

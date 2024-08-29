@@ -22,7 +22,7 @@ public class PlayerInventory : MonoBehaviour
 	public void DropItem(int index)
 	{
 		var item = inventory.GetItem(index);
-		GameObject itemModel = Instantiate(item.componentType.Model,transform.position + transform.forward * 2 + Vector3.up, Quaternion.identity);
+		GameObject itemModel = Instantiate(item.ComponentType.Model,transform.position + transform.forward * 2 + Vector3.up, Quaternion.identity);
 
 		inventory.RemoveItem(index);
 
