@@ -39,7 +39,7 @@ public class CraftingSystem : MonoBehaviour
         List<CraftingComponent> items = new();
         foreach (var instance in currentRecipe) { items.Add(instance.ComponentType); }
 
-        var result = _blueprints.FirstOrDefault(x => x.Components.SequenceEqual(items));
+        var result = _blueprints.FirstOrDefault(x => ScrambledEquals(x.Components, items));
 
         Debug.Log(result);
 
@@ -65,4 +65,10 @@ public class CraftingSystem : MonoBehaviour
 
         ClearCurrent();
     }
+
+	private bool ScrambledEquals(List<CraftingComponent> x, List<CraftingComponent> y)
+	{
+        if (x == null || y == null) return false;
+		return x.Count == y.Count && !x.Except(y).Any();
+	}
 }

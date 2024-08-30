@@ -6154,6 +6154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   display: {fileID: 1522813148}
   craftingDisplay: {fileID: 378923350}
+  input: {fileID: 0}
 --- !u!114 &1792671658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6212,10 +6213,6 @@ MonoBehaviour:
     m_ActionId: 782fced6-bf56-4f15-b976-956121090c5b
     m_ActionName: Movement/New action
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: a5175ab3-b5ba-4311-b944-cf68d64760b8
-    m_ActionName: Movement/DropTest[/Keyboard/q]
-  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1792671657}
         m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
@@ -6231,6 +6228,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: ec0e8b2a-7b59-44af-b0d0-4d321012b519
     m_ActionName: Movement/OpenEquipment[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1792671657}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: InventoryOpen
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: eac0f4cd-02a3-4d0a-99dd-17216b6b1f3f
+    m_ActionName: UI/OpenEquipment[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Movement
   m_DefaultActionMap: Movement
@@ -7452,8 +7465,8 @@ SceneRoots:
   - {fileID: 1083909067}
   - {fileID: 528756184}
   - {fileID: 825993875}
-  - {fileID: 1792671659}
   - {fileID: 1358638846}
   - {fileID: 1371520106}
+  - {fileID: 1792671659}
   - {fileID: 1664990201}
   - {fileID: 1039918388}

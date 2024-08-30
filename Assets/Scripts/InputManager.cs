@@ -10,6 +10,8 @@ public class InputManager : MonoBehaviour
 	private InventoryDisplay display;
 	[SerializeField]
 	private InventoryDisplay craftingDisplay;
+	[SerializeField]
+	private PlayerInput input;
 
 	public Vector2 moveDirection { get; private set; } = Vector2.zero;
 	public Vector2 lookingDirection { get; private set; } = Vector2.zero;
@@ -17,6 +19,7 @@ public class InputManager : MonoBehaviour
 	{
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
+		input = GetComponent<PlayerInput>();
 	}
 
 	public void KeyboardMovementInput(InputAction.CallbackContext context) => moveDirection = context.ReadValue<Vector2>();
@@ -28,7 +31,6 @@ public class InputManager : MonoBehaviour
 	}
 
 	public void InventoryOpen(InputAction.CallbackContext context) {
-		Debug.Log("Yes");
 		if (context.performed) { 
 			display.gameObject.SetActive(!display.gameObject.activeSelf);
 			craftingDisplay.gameObject.SetActive(false);
@@ -36,10 +38,12 @@ public class InputManager : MonoBehaviour
 			if (Cursor.lockState == CursorLockMode.None && !display.gameObject.activeSelf) { 
 				Cursor.lockState = CursorLockMode.Locked; 
 				Cursor.visible = false;
+				input.SwitchCurrentActionMap("Movement");
 			} 
 			else { 
 				Cursor.lockState = CursorLockMode.None;
 				Cursor.visible = true;
+				input.SwitchCurrentActionMap("UI");
 			}
 		}
 	}

@@ -24,15 +24,6 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "DropTest",
-                    "type": "Button",
-                    "id": "a5175ab3-b5ba-4311-b944-cf68d64760b8",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "OpenEquipment",
                     "type": "Button",
                     "id": "ec0e8b2a-7b59-44af-b0d0-4d321012b519",
@@ -155,18 +146,35 @@
                 },
                 {
                     "name": "",
-                    "id": "1b492825-48fa-42bd-8067-446c62186693",
-                    "path": "<Keyboard>/q",
+                    "id": "57752105-87a0-4489-9a15-1b19256275e6",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "Movement",
-                    "action": "DropTest",
+                    "action": "OpenEquipment",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
+                }
+            ]
+        },
+        {
+            "name": "UI",
+            "id": "1776c1ff-1454-4050-ac70-f938db1a5c28",
+            "actions": [
+                {
+                    "name": "OpenEquipment",
+                    "type": "Button",
+                    "id": "eac0f4cd-02a3-4d0a-99dd-17216b6b1f3f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
                 {
                     "name": "",
-                    "id": "57752105-87a0-4489-9a15-1b19256275e6",
+                    "id": "a75d1ab8-e608-433d-b0fe-32cdafa775ce",
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
