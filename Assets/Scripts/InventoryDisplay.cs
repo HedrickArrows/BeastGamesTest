@@ -18,7 +18,7 @@ public class InventoryDisplay : MonoBehaviour
         UpdateInventory();
     }
 
-	private void nEnable() {
+	private void OnEnable() {
 		UpdateInventory();
 	}
 

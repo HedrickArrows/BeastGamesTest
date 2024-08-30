@@ -8,6 +8,8 @@ public class InputManager : MonoBehaviour
 {
 	[SerializeField]
 	private InventoryDisplay display;
+	[SerializeField]
+	private InventoryDisplay craftingDisplay;
 
 	public Vector2 moveDirection { get; private set; } = Vector2.zero;
 	public Vector2 lookingDirection { get; private set; } = Vector2.zero;
@@ -29,10 +31,16 @@ public class InputManager : MonoBehaviour
 		Debug.Log("Yes");
 		if (context.performed) { 
 			display.gameObject.SetActive(!display.gameObject.activeSelf);
+			craftingDisplay.gameObject.SetActive(false);
 
-			if (Cursor.lockState == CursorLockMode.None) { Cursor.lockState = CursorLockMode.Locked; } 
-			else { Cursor.lockState = CursorLockMode.None; }
-			Cursor.visible = !Cursor.visible;
+			if (Cursor.lockState == CursorLockMode.None && !display.gameObject.activeSelf) { 
+				Cursor.lockState = CursorLockMode.Locked; 
+				Cursor.visible = false;
+			} 
+			else { 
+				Cursor.lockState = CursorLockMode.None;
+				Cursor.visible = true;
+			}
 		}
 	}
 
