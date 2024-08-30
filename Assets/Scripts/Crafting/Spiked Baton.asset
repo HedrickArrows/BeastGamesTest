@@ -15,4 +15,4 @@ MonoBehaviour:
   componentName: Spiked Baton
   icon: {fileID: 21300000, guid: 07e30fa92e8bf954a81756765e5c551c, type: 3}
   model: {fileID: 5670976947084611541, guid: bc7d999b4273c144e90b67771e720ca1, type: 3}
-  description: 
+  description: "To jest pa\u0142ka z gwo\u017Adziami"

@@ -15,4 +15,4 @@ MonoBehaviour:
   componentName: Stone
   icon: {fileID: 21300000, guid: 61771280682d09643be8dcc243e45bd7, type: 3}
   model: {fileID: 5670976947084611541, guid: 5d2e86a90b34be540922e11529906e96, type: 3}
-  description: 
+  description: "To s\u0105 kamienie"

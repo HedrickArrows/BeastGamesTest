@@ -15,4 +15,4 @@ MonoBehaviour:
   componentName: Plank
   icon: {fileID: 21300000, guid: e69880baa6dc3c14cbcfa6811b176db0, type: 3}
   model: {fileID: 5670976947084611541, guid: fd7cfbc914803cc4bb1b765874eba187, type: 3}
-  description: 
+  description: To jest deska

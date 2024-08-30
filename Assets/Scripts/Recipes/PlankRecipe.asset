@@ -16,3 +16,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 94114174dfe6bac448c2b9c68809be97, type: 2}
   - {fileID: 11400000, guid: 94114174dfe6bac448c2b9c68809be97, type: 2}
   result: {fileID: 11400000, guid: 754871baa0e766944b3c4ff527a3c65d, type: 2}
+  successRate: 100
+  onSuccessEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onFailureEvent:
+    m_PersistentCalls:
+      m_Calls: []

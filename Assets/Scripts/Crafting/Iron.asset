@@ -15,4 +15,4 @@ MonoBehaviour:
   componentName: Iron
   icon: {fileID: 21300000, guid: 8ddc52f029ed8ae4a9a97c4568f92a53, type: 3}
   model: {fileID: 5670976947084611541, guid: 7fbf4b3b627f7da41872693d3f5f30be, type: 3}
-  description: 
+  description: "To jest ruda \u017Celaza"
